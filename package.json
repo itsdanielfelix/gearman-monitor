@@ -1,10 +1,22 @@
 {
-  "name": "my-opentui-project",
+  "name": "gearman-monitor",
+  "version": "1.0.0",
+  "description": "TUI for monitoring Gearman job servers",
   "module": "src/index.tsx",
   "type": "module",
-  "private": true,
+  "license": "MIT",
+  "homepage": "https://github.com/itsdanielfelix/gearman-monitor",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/itsdanielfelix/gearman-monitor"
+  },
   "scripts": {
-    "dev": "bun run --watch src/index.tsx"
+    "dev": "bun run --watch src/index.tsx",
+    "build": "bun run build.ts",
+    "build:macos-arm64": "bun build --compile --target=bun-darwin-arm64 src/index.tsx --outfile gearman-monitor-macos-arm64",
+    "build:macos-x64": "bun build --compile --target=bun-darwin-x64 src/index.tsx --outfile gearman-monitor-macos-x64",
+    "build:linux-x64": "bun build --compile --target=bun-linux-x64 src/index.tsx --outfile gearman-monitor-linux-x64",
+    "build:linux-arm64": "bun build --compile --target=bun-linux-arm64 src/index.tsx --outfile gearman-monitor-linux-arm64"
   },
   "devDependencies": {
     "@types/bun": "latest"
