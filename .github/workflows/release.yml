@@ -19,9 +19,6 @@ jobs:
           - runs-on: ubuntu-latest
             target: bun-linux-x64
             artifact: gearman-monitor-linux-x64
-          - runs-on: ubuntu-latest
-            target: bun-linux-arm64
-            artifact: gearman-monitor-linux-arm64
 
     runs-on: ${{ matrix.runs-on }}
 
@@ -61,6 +58,5 @@ jobs:
             artifacts/gearman-monitor-macos-arm64
             artifacts/gearman-monitor-macos-x64
             artifacts/gearman-monitor-linux-x64
-            artifacts/gearman-monitor-linux-arm64
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
