@@ -13,9 +13,6 @@ jobs:
           - runs-on: macos-latest
             target: bun-darwin-arm64
             artifact: gearman-monitor-macos-arm64
-          - runs-on: macos-latest
-            target: bun-darwin-x64
-            artifact: gearman-monitor-macos-x64
           - runs-on: ubuntu-latest
             target: bun-linux-x64
             artifact: gearman-monitor-linux-x64
@@ -56,7 +53,6 @@ jobs:
           generate_release_notes: true
           files: |
             artifacts/gearman-monitor-macos-arm64
-            artifacts/gearman-monitor-macos-x64
             artifacts/gearman-monitor-linux-x64
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

@@ -14,7 +14,6 @@
     "dev": "bun run --watch src/index.tsx",
     "build": "bun run build.ts",
     "build:macos-arm64": "bun build --compile --target=bun-darwin-arm64 src/index.tsx --outfile gearman-monitor-macos-arm64",
-    "build:macos-x64": "bun build --compile --target=bun-darwin-x64 src/index.tsx --outfile gearman-monitor-macos-x64",
     "build:linux-x64": "bun build --compile --target=bun-linux-x64 src/index.tsx --outfile gearman-monitor-linux-x64"
   },
   "devDependencies": {
