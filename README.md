@@ -37,7 +37,9 @@ Download the latest release for your platform from the [GitHub Releases](https:/
 | Platform | Architecture | Binary |
 |----------|--------------|--------|
 | macOS | ARM64 (Apple Silicon) | `gearman-monitor-macos-arm64` |
+| macOS | x64 (Intel) | `gearman-monitor-macos-x64` |
 | Linux | x64 | `gearman-monitor-linux-x64` |
+| Linux | ARM64 | `gearman-monitor-linux-arm64` |
 
 Make the binary executable and run:
 
@@ -90,8 +92,14 @@ bun dev
 # Build for macOS ARM64
 bun build --compile --target=bun-darwin-arm64 src/index.tsx --outfile gearman-monitor-macos-arm64
 
+# Build for macOS x64
+bun build --compile --target=bun-darwin-x64 src/index.tsx --outfile gearman-monitor-macos-x64
+
 # Build for Linux x64
 bun build --compile --target=bun-linux-x64 src/index.tsx --outfile gearman-monitor-linux-x64
+
+# Build for Linux ARM64
+bun build --compile --target=bun-linux-arm64 src/index.tsx --outfile gearman-monitor-linux-arm64
 ```
 
 ## License
